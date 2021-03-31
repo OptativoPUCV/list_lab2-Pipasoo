@@ -122,8 +122,8 @@ void * popCurrent(List * list) {
     list->head->prev=NULL;
   }
   if(list->current == list->tail){
-    list->tail= list->current->prev;
-    list->tail->next= NULL;
+    list->tail= list->current->next;
+    list->tail->prev= NULL;
   }
 
     return(void*) DatoNuevo->data;
