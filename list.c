@@ -92,7 +92,8 @@ void pushBack(List * list, const void * data) {
 void pushCurrent(List * list, const void * data) {
  Node*NuevoDato2=createNode(data);
  if (list-> current !=NULL){
-   list -> current -> next= NuevoDato2;
+   list->current = NuevoDato2;
+   list-> current-> next= list->current;
    NuevoDato2->prev = list -> current;
    list-> current= NuevoDato2;
  }else{
