@@ -21,3 +21,9 @@ Wed Mar 31 02:52:19 UTC 2021:
  1 file changed, 4 insertions(+)
  tests:  0|0
 cc36016
+Wed Mar 31 02:53:42 UTC 2021: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|4
+total_score: 25/70
+c2cc52e
