@@ -75,6 +75,10 @@ void pushFront(List * list, const void * data) {
     list -> head = list -> head -> prev;
     list -> current = NuevoDato;
   }
+  else{
+    list -> head = NuevoDato;
+    list -> current = NuevoDato;
+  }
 }
 
 void pushBack(List * list, const void * data) {
