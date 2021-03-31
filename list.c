@@ -77,7 +77,9 @@ void pushFront(List * list, const void * data) {
   }
   else{
     list -> head = NuevoDato;
+    list -> tail = NuevoDato;
     list -> current = NuevoDato;
+  
   }
 }
 
