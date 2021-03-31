@@ -95,6 +95,10 @@ void pushCurrent(List * list, const void * data) {
    list -> current -> next= NuevoDato2;
    NuevoDato2->prev = list -> current;
    list-> current= NuevoDato2;
+ }else{
+   list->head = NuevoDato2;
+   list->tail=NuevoDato2;
+   list->current=NuevoDato2;
  }
 }
 
