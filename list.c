@@ -119,8 +119,8 @@ void * popCurrent(List * list) {
   Node*DatoNuevo=list->current;
   if(list->current == list->tail){
       list->tail= list->tail->prev; 
-      list->tail= list->current->next; // entonces te digoc, para 
-
+      list->tail->next= NULL; // entonces te digoc, para el tail son dos condiciones nomas, cambiar el nuevo tail y hacer que su siguiente a punte a Null guud asi?
+      
   }else if(list->current == list->head){
     list->head= list->current->next;
     list->head->prev=NULL;
