@@ -116,21 +116,22 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-  Node*DatoNuevo=list->current;
+  Node*DatoNuevo=list->current; 
+  void*liberar= (void*)DatoNuevo->data;
   if(list->current == list->tail){
       list->tail= list->tail->prev; 
       list->tail->next= NULL; 
 
   }else if(list->current == list->head){
-    list->head= list->current->next; //perfe
-    list->head->prev=NULL; // super, aca ta todo bien
+    list->head= list->current->next; 
+    list->head->prev=NULL; 
 
   }else{
-    list->current->next->prev=list->current->prev;
-    list->current->prev->next=list->current->next;
+    DatoNuevo->next->prev=list->current->prev;
+    list->current->prev->next=list->current->next; 
   }
-  // no lei, te decia que en esta parte 
-  return(void*) DatoNuevo->data;
+  free(DatoNuevo);
+  return liberar; //... asi?
 }
 
 void cleanList(List * list) {
