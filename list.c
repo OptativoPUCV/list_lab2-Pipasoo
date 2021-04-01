@@ -118,8 +118,8 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   Node*DatoNuevo=list->current;
   if(list->current == list->tail){
-      list->tail->prev= list->tail;
-      list->tail= list->current->next;
+      list->tail= list->tail->prev; 
+      list->tail= list->current->next; // entonces te digoc, para 
 
   }else if(list->current == list->head){
     list->head= list->current->next;
