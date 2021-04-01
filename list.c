@@ -119,16 +119,17 @@ void * popCurrent(List * list) {
   Node*DatoNuevo=list->current;
   if(list->current == list->tail){
       list->tail= list->tail->prev; 
-      list->tail->next= NULL; // entonces te digoc, para el tail son dos condiciones nomas, cambiar el nuevo tail y hacer que su siguiente a punte a Null guud asi?
-      
+      list->tail->next= NULL; 
+
   }else if(list->current == list->head){
-    list->head= list->current->next;
-    list->head->prev=NULL;
+    list->head= list->current->next; //perfe
+    list->head->prev=NULL; // super, aca ta todo bien
 
   }else{
     list->current->next->prev=list->current->prev;
     list->current->prev->next=list->current->next;
   }
+  // no lei, te decia que en esta parte 
   return(void*) DatoNuevo->data;
 }
 
