@@ -131,8 +131,7 @@ void * popCurrent(List * list) {
     list->current->prev->next=list->current->next; 
   }
   free(datoNuevo);
-  return liberar; // despues se te hara de ayuda cuando tengas mil lineas de codigo, eso tambien es parte de las buenas practicas, pero en C las variables no parten con mayus bien dicho seria datoNuevo, eso se debe que solamente el tipo de variable y estructuras parten en mayus
- // Mmmh, lo voy a cambiar jaja porsiacaso jaja
+  return liberar; 
 }
 void cleanList(List * list) {
     while (list->head != NULL) {
